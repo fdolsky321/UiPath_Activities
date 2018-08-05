@@ -15,9 +15,9 @@ The installation of this activity pack is pretty straight forward. You have just
 ### Install and Configure Python 3
 - Download Python 3.6 (last release, currently 3.6.6) - [Windows x86 embeddable zip file](https://www.python.org/ftp/python/3.6.6/python-3.6.6.exe). Only x86 is compatible with UiPath Studio. For configuration just follow instructions below or use [this tutorial](https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation).
 - Open the downloaded `python-3.6.6.exe` file. You can choose `Install Now` with default location OR `Customize installation`. The easiest way is to use `Install Now` option and check the <i>Add Python 3.6 to PATH</i>. Based on this option, you will automatically install and configure all of these:
-    --- Python 3 Interpreter to the automatically selected location
-    --- Configure Path to Python, so you can use python interpreter across the whole Environment.
-    --- Configure [Pip v. 10.0.1](https://en.wikipedia.org/wiki/Pip_(package_manager)) - Python Package manager
+    Python 3 Interpreter to the automatically selected location
+    Configure Path to Python, so you can use python interpreter across the whole Environment.
+    Configure [Pip v. 10.0.1](https://en.wikipedia.org/wiki/Pip_(package_manager)) - Python Package manager
 
 ### SpeechRecognition Library
 

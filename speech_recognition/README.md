@@ -13,10 +13,11 @@ To be able to use this custom activity in your UiPath Studio, please follow all 
 The installation of this activity pack is pretty straight forward. You have just to follow [these instructions](https://studio.uipath.com/v2017.1/docs/managing-activities-packages) and find the <b>Python Activities pack</b>.
 
 ### Install and Configure Python 3
-- Download Python 3.6 (last release, currently 3.6.6) - [Windows x86 embeddable zip file](https://www.python.org/ftp/python/3.6.6/python-3.6.6-embed-win32.zip). Only x86 is compatible with UiPath Studio.
-- Extract your downloaded Python to your local filesystem, i.e. <b>C:\Python36-32</b>. Now you are able to use Python 3 interpreter in C:\Python36-32 location. But obviously you want to use Python 3 interpreter across your environment. For that purpose, you have to set environment variable for Python.
-    - Test
-    - Test 1
+- Download Python 3.6 (last release, currently 3.6.6) - [Windows x86 embeddable zip file](https://www.python.org/ftp/python/3.6.6/python-3.6.6.exe). Only x86 is compatible with UiPath Studio. For configuration just follow instructions below or use [this tutorial](https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation).
+- Open the downloaded `python-3.6.6.exe` file. You can choose `Install Now` with default location OR `Customize installation`. The easiest way is to use `Install Now` option and check the <i>Add Python 3.6 to PATH</i>. Based on this option, you will automatically install and configure all of these:
+-- Python 3 Interpreter to the automatically selected location
+-- Configure Path to Python, so you can use python interpreter across the whole Environment.
+-- Configure [Pip v. 10.0.1](https://en.wikipedia.org/wiki/Pip_(package_manager)) - Python Package manager
 
 ### SpeechRecognition Library
 

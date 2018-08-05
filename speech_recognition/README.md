@@ -7,6 +7,9 @@ This activity perform the speech / voice recognition. It can process the voice r
 - [PyAudio Library](https://pypi.org/project/PyAudio/)
 
 ## Configuration
+To be able to use Python code in UiPath Studio, you have to firstly install Python Activities pack in UiPath Studio. 
+### [Python Activities Pack](https://activities.uipath.com/docs/about-the-python-activities-pack)
+The installation of this activity pack is pretty straight forward. You have just to follow [these instructions](https://studio.uipath.com/v2017.1/docs/managing-activities-packages) and find the <b>Python Activities pack</b>.
 ### Python 3
 
 ### SpeechRecognition Library

@@ -23,5 +23,3 @@ The installation of this activity pack is pretty straight forward. You have just
 To be able to use SpeechRecognition library, you have to install this library by using Pip. Just open the Command Prompt and run:
 `python -m pip install SpeechRecognition`
 This will automatically install the up-to-date version of SpeechRecognition library.
-
-### PyAudio Library

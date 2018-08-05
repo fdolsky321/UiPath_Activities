@@ -12,7 +12,7 @@ To be able to use this custom activity in your UiPath Studio, please follow all 
 ### [Install Python Activities Pack](https://activities.uipath.com/docs/about-the-python-activities-pack)
 The installation of this activity pack is pretty straight forward. You have just to follow [these instructions](https://studio.uipath.com/v2017.1/docs/managing-activities-packages) and find the <b>Python Activities pack</b>.
 
-### Install and Configure Python 3
+### [Install and Configure Python 3](https://www.python.org/)
 - Download Python 3.6 (last release, currently 3.6.6) - [Windows x86 embeddable zip file](https://www.python.org/ftp/python/3.6.6/python-3.6.6.exe). Only x86 is compatible with UiPath Studio. For configuration just follow instructions below or use [this tutorial](https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation).
 - Open the downloaded `python-3.6.6.exe` file. You can choose `Install Now` with default location OR `Customize installation`. The easiest way is to use `Install Now` option and check the <i>Add Python 3.6 to PATH</i>. Based on this option, you will automatically install and configure all of these.
     - Python 3 Interpreter to the automatically selected location

@@ -5,3 +5,10 @@ This activity perform the speech / voice recognition. It can process the voice r
 - [Python 3](https://www.python.org/downloads/)
 - [SpeechRecognition Library](https://pypi.org/project/SpeechRecognition/)
 - [PyAudio Library](https://pypi.org/project/PyAudio/)
+
+## Configuration
+### Python 3
+
+### SpeechRecognition Library
+
+### PyAudio Library

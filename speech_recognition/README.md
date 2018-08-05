@@ -19,6 +19,9 @@ The installation of this activity pack is pretty straight forward. You have just
     - Configure Path to Python, so you can use python interpreter across the whole Environment.
     - Configure [Pip v. 10.0.1](https://en.wikipedia.org/wiki/Pip_(package_manager)) - Python Package manager
 
-### SpeechRecognition Library
+### [SpeechRecognition Library](https://pypi.org/project/SpeechRecognition/)
+To be able to use SpeechRecognition library, you have to install this library by using Pip. Just open the Command Prompt and run:
+`python -m pip install SpeechRecognition`
+This will automatically install the up-to-date version of SpeechRecognition library.
 
 ### PyAudio Library

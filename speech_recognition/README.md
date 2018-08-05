@@ -15,7 +15,8 @@ The installation of this activity pack is pretty straight forward. You have just
 ### Install and Configure Python 3
 - Download Python 3.6 (last release, currently 3.6.6) - [Windows x86 embeddable zip file](https://www.python.org/ftp/python/3.6.6/python-3.6.6-embed-win32.zip). Only x86 is compatible with UiPath Studio.
 - Extract your downloaded Python to your local filesystem, i.e. <b>C:\Python36-32</b>. Now you are able to use Python 3 interpreter in C:\Python36-32 location. But obviously you want to use Python 3 interpreter across your environment. For that purpose, you have to set environment variable for Python.
--- Test
+    - Test
+    - Test 1
 
 ### SpeechRecognition Library
 

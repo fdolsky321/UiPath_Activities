@@ -7,8 +7,10 @@ This activity perform the speech / voice recognition. It can process the voice r
 - [PyAudio Library](https://pypi.org/project/PyAudio/)
 
 ## Configuration
-To be able to use this custom activity in your UiPath Studio, please follow all instruction below.
+To be able to use this python script in your UiPath Studio, please follow all instruction below.
 
+### [Import Custom Activity](https://activities.uipath.com/docs/creating-a-custom-activity)
+As an additional custom activity, there is a activity to set all parameters for Speech recognition.
 ### [Install Python Activities Pack](https://activities.uipath.com/docs/about-the-python-activities-pack)
 The installation of this activity pack is pretty straight forward. You have just to follow [these instructions](https://studio.uipath.com/v2017.1/docs/managing-activities-packages) and find the <b>Python Activities pack</b>.
 

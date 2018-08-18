@@ -2,6 +2,12 @@
 This activity perform the speech / voice recognition. It can process the voice recorded by your microphone or just process Audiofile with recorded voice such a .wav, aiff, .flac. This activity is mostly using [SpeechRecognition python library](https://pypi.org/project/SpeechRecognition/). For this activity, there is provided additional Custom activity for getting input parameters for python script. This custom activity is written in C# and is described below. 
 
 
+## Content
+- [Prerequisities]
+- [Configuration]
+    - [Import Custom Activity]
+    - [Install Python Activities Pack]
+
 ## Prerequisities
 - [Python 3](https://www.python.org/downloads/)
 - [SpeechRecognition Library](https://pypi.org/project/SpeechRecognition/)

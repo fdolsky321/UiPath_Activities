@@ -88,9 +88,11 @@ For setting up all necessarrily arguments, there is a custom activity provided i
             <li>OutputParameters</li>
         </ul>    
     </li>
-</ul>   
+</ul>
+
 ---
 ## Demo
+fad
 
 ### Python Activity Scope
 Now you have all prerequisities for using Python script in UiPath Studio. There needs to be just configured the Python Scope. In this Activity, just put the Path to the Python folder, i.e.: `C:\Python36-32`. The easiest way, how to get the Python location, is to run this command in Command Prompt:

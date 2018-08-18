@@ -29,9 +29,36 @@ Options
 Output
     OutputArguments<IEnumerable<object>>
 <ul>
-   <li>Item 1</li>
-   <li>Item 2</list>
+    <li>Input
+        <ul>
+            <li>DeviceID</li>
+        </ul>
+    </li>    
+    <li>
+        <ul>
+            <li>APIKey</li>
+            <li>Username</li>
+            <li>Password</li>
+        </ul>
+    </li>
+    <li>Options
+        <ul>
+            <li>DynamicEnergyThreshold</li>
+            <li>EnergyThresholdValue</li>
+            <li>Engine</li>
+            <li>InputLanguage</li>
+            <li>PauseThreshold</li>
+            <li>PhraseTimeLimit</li>
+            <li>TimeoutSeconds</li>
+        </ul>
+    </li>
+    <li>Output
+        <ul>
+            <li>OutputParameters</li>
+        </ul>    
+    </li>
 </ul>   
+
 
 ### Install Python Activities Pack
 The installation of this activity pack is pretty straight forward. You have just to follow [these instructions](https://studio.uipath.com/v2017.1/docs/managing-activities-packages) and find the <b>Python Activities pack</b>. Short info about the existing python activities pack, you can see in [UiPath documentation](https://activities.uipath.com/docs/about-the-python-activities-pack)
@@ -50,11 +77,13 @@ To be able to use SpeechRecognition library, you have to install this library by
 `python -m pip install SpeechRecognition`
 This will automatically install the up-to-date version of SpeechRecognition library.
 
+
 ### [PyAudio Library](https://pypi.org/project/PyAudio/)
 To enable more features to this Python script, we are using PyAudio library. Install this library the same way, as SpeechRecognition Library by using command:
 `python -m pip install PyAudio`
 It will install automatically the up-to-date version of PyAudio library.
 
+---
 ## Python Activity Scope
 Now you have all prerequisities for using Python script in UiPath Studio. There needs to be just configured the Python Scope. In this Activity, just put the Path to the Python folder, i.e.: `C:\Python36-32`. The easiest way, how to get the Python location, is to run this command in Command Prompt:
 `where python`. Then just remove the last part of the location, which is: `\python.exe`. Now you are able to run the python script in UiPath Studio

@@ -4,8 +4,8 @@ This activity perform the speech / voice recognition. It can process the voice r
 ## Table of Contents
 **[Prerequisities](#prerequisities)**<br>
 **[Configuration](#configuration)**<br>
-    **[Import Custom Activity](#import-custom-activity)**<br>
-    **[Install Python Activities Pack](#nstall-python-activities-pack)**<br>
+    ***[Import Custom Activity](#import-custom-activity)**<br>
+    ***[Install Python Activities Pack](#nstall-python-activities-pack)**<br>
 
 
 ## Prerequisities

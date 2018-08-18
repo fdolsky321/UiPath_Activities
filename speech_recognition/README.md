@@ -6,8 +6,10 @@ This activity perform the speech / voice recognition. It can process the voice r
 - [Configuration](#configuration)
     - [Import Custom Activity](#import-custom-activity)
     - [Install Python Activities Pack](#nstall-python-activities-pack)
+    - [Install and Configure Python 3](#install-and-configure-python-3)
+- [Usage](#usage)
 
-
+---
 ## Prerequisities
 - [Python 3](https://www.python.org/downloads/)
 - [SpeechRecognition Library](https://pypi.org/project/SpeechRecognition/)
@@ -20,22 +22,7 @@ To be able to use this python script in your UiPath Studio, please follow all in
 ### Import Custom Activity
 As an additional custom activity, there is an activity to set all parameters for Speech recognition. For handling an input for python script, which is responsible for speech recognition, you can simply use `SetupParameters.cs` activity. The way, how to create a custom activity, you can follow [UiPath instructions](https://activities.uipath.com/docs/creating-a-custom-activity).Firstly, you need to create .dll and then use <b>Nuget Package Explorer</b> to create the nuget package, which will be then imported to UiPath as a Custom Activity. In this Custom Activity, there are these arguments.
 
-Input
-    DeviceID<string>
-Logon
-    APIKey<string>
-    Username<string>
-    Password<string>
-Options
-    Engine<string>
-    DynamicEnergyThreshold<Boolean>
-    EnergyThresholdValue<Int32>
-    PauseThreshold<double>
-    TimeoutSeconds<double>
-    PhraseTimeLimit<double>
-    InputLanguage<string>
-Output
-    OutputArguments<IEnumerable<object>>
+
 <ul>
     <li>Input
         <ul>

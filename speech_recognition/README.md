@@ -2,7 +2,7 @@
 This activity perform the speech / voice recognition. It can process the voice recorded by your microphone or just process Audiofile with recorded voice such a .wav, aiff, .flac. This activity is mostly using [SpeechRecognition python library](https://pypi.org/project/SpeechRecognition/). For this activity, there is provided additional Custom activity for getting input parameters for python script. This custom activity is written in C# and is described below. 
 
 ## Table of Contents
-- [Prerequisities](#prerequisities)
+- [Requirements](#requirements)
 - [Configuration](#configuration)
     - [Import Custom Activity](#import-custom-activity)
     - [Install Python Activities Pack](#nstall-python-activities-pack)
@@ -13,10 +13,12 @@ This activity perform the speech / voice recognition. It can process the voice r
 - [Demo](#demo)
 
 ---
-## Prerequisities
+## Requirements
 - [Python 3](https://www.python.org/downloads/)
 - [SpeechRecognition Library](https://pypi.org/project/SpeechRecognition/)
 - [PyAudio Library](https://pypi.org/project/PyAudio/)
+- [Google API Client Library for Python](https://developers.google.com/api-client-library/python/start/installation) - just in case, you want to use Google Cloud engine for speech recognition
+- [PocketSphinx](https://pypi.org/project/pocketsphinx/) - just in case, you want to use PocketSphinx as an engine for speech recognition
 
 
 ## Configuration
@@ -52,6 +54,22 @@ This will automatically install the up-to-date version of SpeechRecognition libr
 To enable more features to this Python script, we are using PyAudio library. Install this library the same way, as SpeechRecognition Library by using command:
 `python -m pip install PyAudio`
 It will install automatically the up-to-date version of PyAudio library.
+
+---
+### Install Google API Client Library
+To be able to use Google API Client library, you have to install this library by using Pip. Just open the Command Prompt and run:
+`
+python -m pip install google-api-python-client
+`
+This will automatically install the up-to-date version of Google API Client library and you will be able to use Google Cloud for speech recognition. This library requires also API key.
+
+---
+### Install PocketSphinx
+To be able to use PocketSphinx library, you have to install this library by using Pip. Just open the Command Prompt and run:
+`
+python -m pip install PocketSphinx
+`
+This will automatically install the up-to-date version of PocketSphinx library and you will be able to use offline pocketsphinx for speech recognition.
 
 ---
 ## Usage
@@ -90,13 +108,28 @@ For setting up all necessarrily arguments, there is a custom activity provided i
     </li>
 </ul>
 <br/>
-<b>DeviceID</b><br/>
-For Speech recognition, where you want to record the voice, you have to specify the ID of input device (microphone). Mostly it's good enough to use the default one with index 0. During debugging, you can get the index of all your input devices pretty easily by following python script (for python3):
-
+<b>DeviceID <Int32> - Optional</b><br/>
+For Speech recognition, where you want to record the voice, you have to specify the ID of input device (microphone). This argument is optional, by default it's 0. Mostly it's good enough to use the default one with index 0. During debugging, you can get the index of all your input devices pretty easily by following python script (for python3):
+<br/>
 ```python
 import speech_recognition as sr
 print(sr.Microphone.list_microphone_names())
 ```
+<br/>
+<b>APIKey <string> - Optional</b><br/>
+APIKey is the authentication for some engines, which you can use for speech recognition. All speech recognition engines are listed and described in section below - Engine. This argument is optional, because it is dependent on used engine. By default, its `None`.
+
+<br/>
+<b>Username <string> - Optional</b><br/>
+There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify the username. By default, it's None.
+
+<br/>
+<b>Password <string> - Optional</b><br/>
+The same as for usernam. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password. By default, it's None.
+
+<br/>
+<b>Password <string> - Optional</b><br/>
+The same as for usernam. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password. By default, it's None.
 
 ---
 ## Demo

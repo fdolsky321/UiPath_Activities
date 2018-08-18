@@ -91,7 +91,12 @@ For setting up all necessarrily arguments, there is a custom activity provided i
 </ul>
 <br/>
 <b>DeviceID</b><br/>
-For Speech recognition, where you want to record the voice, you have to specify
+For Speech recognition, where you want to record the voice, you have to specify the ID of input device (microphone). Mostly it's good enough to use the default one with index 0. During debugging, you can get the index of all your input devices pretty easily by following python script (for python3):
+
+```python
+import speech_recognition as sr
+print(sr.Microphone.list_microphone_names())
+```
 
 ---
 ## Demo

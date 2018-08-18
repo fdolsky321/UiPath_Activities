@@ -9,8 +9,8 @@ This activity perform the speech / voice recognition. It can process the voice r
 ## Configuration
 To be able to use this python script in your UiPath Studio, please follow all instruction below.
 
-### [Import Custom Activity](https://activities.uipath.com/docs/creating-a-custom-activity)
-As an additional custom activity, there is an activity to set all parameters for Speech recognition. For handling an input for python script, which is responsible for speech recognition, you can simply use `SetupParameters.cs` activity. Firstly, you need to create .dll and then use <b>Nuget Package Explorer</b> to create the nuget package, which will be then imported to UiPath as a Custom Activity. In this Custom Activity, there are these arguments.
+### Import Custom Activity
+As an additional custom activity, there is an activity to set all parameters for Speech recognition. For handling an input for python script, which is responsible for speech recognition, you can simply use `SetupParameters.cs` activity. The way, how to create a custom activity, you can follow [UiPath instructions](https://activities.uipath.com/docs/creating-a-custom-activity).Firstly, you need to create .dll and then use <b>Nuget Package Explorer</b> to create the nuget package, which will be then imported to UiPath as a Custom Activity. In this Custom Activity, there are these arguments.
 * Input
     * DeviceID<string>
 * Logon
@@ -27,9 +27,9 @@ As an additional custom activity, there is an activity to set all parameters for
     * InputLanguage<string>
 * Output
     * OutputArguments<IEnumerable<object>>
-Test   
-### [Install Python Activities Pack](https://activities.uipath.com/docs/about-the-python-activities-pack)
-The installation of this activity pack is pretty straight forward. You have just to follow [these instructions](https://studio.uipath.com/v2017.1/docs/managing-activities-packages) and find the <b>Python Activities pack</b>.
+
+### Install Python Activities Pack
+The installation of this activity pack is pretty straight forward. You have just to follow [these instructions](https://studio.uipath.com/v2017.1/docs/managing-activities-packages) and find the <b>Python Activities pack</b>. Short info about the existing python activities pack, you can see in [UiPath documentation](https://activities.uipath.com/docs/about-the-python-activities-pack)
 
 
 ### [Install and Configure Python 3](https://www.python.org/)

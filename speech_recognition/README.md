@@ -31,7 +31,7 @@ As an additional custom activity, there is an activity to set all parameters for
             <li>DeviceID</li>
         </ul>
     </li>    
-    <li>
+    <li>Logon
         <ul>
             <li>APIKey</li>
             <li>Username</li>

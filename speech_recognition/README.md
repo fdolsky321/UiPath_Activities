@@ -8,6 +8,8 @@ This activity perform the speech / voice recognition. It can process the voice r
     - [Install Python Activities Pack](#nstall-python-activities-pack)
     - [Install and Configure Python 3](#install-and-configure-python-3)
 - [Usage](#usage)
+    - [Setup Parameters](#setup-parameters)
+    - [Run Python script](#run-python-script)
 
 ---
 ## Prerequisities

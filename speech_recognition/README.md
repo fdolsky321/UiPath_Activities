@@ -1,13 +1,13 @@
 # Speech Recognition
 This activity perform the speech / voice recognition. It can process the voice recorded by your microphone or just process Audiofile with recorded voice such a .wav, aiff, .flac. This activity is mostly using [SpeechRecognition python library](https://pypi.org/project/SpeechRecognition/). For this activity, there is provided additional Custom activity for getting input parameters for python script. This custom activity is written in C# and is described below. 
 
----
+
 ## Prerequisities
 - [Python 3](https://www.python.org/downloads/)
 - [SpeechRecognition Library](https://pypi.org/project/SpeechRecognition/)
 - [PyAudio Library](https://pypi.org/project/PyAudio/)
 
----
+
 ## Configuration
 To be able to use this python script in your UiPath Studio, please follow all instruction below.
 
@@ -62,10 +62,12 @@ Output
 </ul>   
 
 
+---
 ### Install Python Activities Pack
 The installation of this activity pack is pretty straight forward. You have just to follow [these instructions](https://studio.uipath.com/v2017.1/docs/managing-activities-packages) and find the <b>Python Activities pack</b>. Short info about the existing python activities pack, you can see in [UiPath documentation](https://activities.uipath.com/docs/about-the-python-activities-pack)
 
 
+---
 ### [Install and Configure Python 3](https://www.python.org/)
 - Download Python 3.6 (last release, currently 3.6.6) - [Windows x86 embeddable zip file](https://www.python.org/ftp/python/3.6.6/python-3.6.6.exe). Only x86 is compatible with UiPath Studio. For configuration just follow instructions below or use [this tutorial](https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation).
 - Open the downloaded `python-3.6.6.exe` file. You can choose `Install Now` with default location OR `Customize installation`. The easiest way is to use `Install Now` option and check the <i>Add Python 3.6 to PATH</i>. Based on this option, you will automatically install and configure all of these.
@@ -74,12 +76,14 @@ The installation of this activity pack is pretty straight forward. You have just
     - Configure [Pip v. 10.0.1](https://en.wikipedia.org/wiki/Pip_(package_manager)) - Python Package manager
 
 
+---
 ### [SpeechRecognition Library](https://pypi.org/project/SpeechRecognition/)
 To be able to use SpeechRecognition library, you have to install this library by using Pip. Just open the Command Prompt and run:
 `python -m pip install SpeechRecognition`
 This will automatically install the up-to-date version of SpeechRecognition library.
 
 
+---
 ### [PyAudio Library](https://pypi.org/project/PyAudio/)
 To enable more features to this Python script, we are using PyAudio library. Install this library the same way, as SpeechRecognition Library by using command:
 `python -m pip install PyAudio`

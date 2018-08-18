@@ -89,6 +89,9 @@ For setting up all necessarrily arguments, there is a custom activity provided i
         </ul>    
     </li>
 </ul>
+<br/>
+<b>DeviceID</b><br/>
+For Speech recognition, where you want to record the voice, you have to specify
 
 ---
 ## Demo

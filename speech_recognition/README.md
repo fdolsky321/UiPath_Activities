@@ -46,7 +46,7 @@ The installation of this activity pack is pretty straight forward. You have just
 ### Install SpeechRecognition Library
 To be able to use SpeechRecognition library, you have to install this library by using Pip. Just open the Command Prompt and run:
 `python -m pip install SpeechRecognition`
-This will automatically install the up-to-date version of SpeechRecognition library.
+This will automatically install the up-to-date version of SpeechRecognition library. The whole documentation for this library is [here](https://github.com/Uberi/speech_recognition/blob/master/reference/library-reference.rst). I'm strictly recommend to follow this documentation, as there are many useful information about all functionalities, which are not covered in this documentation.
 
 
 ---
@@ -81,6 +81,7 @@ For setting up all necessarrily arguments, there is a custom activity provided i
     <li>Input
         <ul>
             <li>DeviceID</li>
+            <li>FilePath</li>
         </ul>
     </li>    
     <li>Logon
@@ -117,20 +118,31 @@ print(sr.Microphone.list_microphone_names())
 ```
 
 <br/>
+<b>FilePath <string> - Optional</b><br/>
+For Speech recognition, where you want to convert already recorded sound to string, you need to specify the path to that file. You can use absolute and also relative path to that file. 
+- WAV: must be in PCM/LPCM format
+- AIFF
+- AIFF-C
+- FLAC: must be native FLAC format; OGG-FLAC is not supported
+    
 <b>APIKey <string> - Optional</b><br/>
+
 APIKey is the authentication for some engines, which you can use for speech recognition. All speech recognition engines are listed and described in section below - Engine. This argument is optional, because it is dependent on used engine. By default, its `None`.
 
 <br/>
 <b>Username <string> - Optional</b><br/>
-There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify the username. By default, it's None.
+    
+There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify the username. By default, it's `None`.
 
 <br/>
 <b>Password <string> - Optional</b><br/>
-The same as for usernam. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password. By default, it's None.
+    
+The same as for usernam. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password. By default, it's `None`.
 
 <br/>
 <b>Password <string> - Optional</b><br/>
-The same as for usernam. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password. By default, it's None.
+    
+The same as for username. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password. By default, it's `None`.
 
 ---
 ## Demo

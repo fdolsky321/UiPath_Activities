@@ -118,35 +118,121 @@ print(sr.Microphone.list_microphone_names())
 ```
 
 <br/>
+`Default value: 0`
+<br/>
 <b>FilePath <string> - Optional</b><br/>
-For Speech recognition, where you want to convert already recorded sound to string, you need to specify the path to that file. You can use absolute and also relative path to that file. 
+For Speech recognition, where you want to convert already recorded sound to string, you need to specify the path to that file. You can use absolute and also relative path to that file. All supported input files are listed below:
+    
 - WAV: must be in PCM/LPCM format
 - AIFF
 - AIFF-C
 - FLAC: must be native FLAC format; OGG-FLAC is not supported
-    
+
+<br/>
+`Default value: None`
+<br/>
 <b>APIKey <string> - Optional</b><br/>
 
-APIKey is the authentication for some engines, which you can use for speech recognition. All speech recognition engines are listed and described in section below - Engine. This argument is optional, because it is dependent on used engine. By default, its `None`.
+APIKey is the authentication for some engines, which you can use for speech recognition. All speech recognition engines are listed and described in section below - Engine. This argument is optional, because it is dependent on used engine.
 
+<br/>
+`Default value: None`
+<br/>
+<b>Password <string> - Optional</b><br/>
+    
+The same as for username. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password.
+
+`Default value: None`
 <br/>
 <b>Username <string> - Optional</b><br/>
     
-There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify the username. By default, it's `None`.
+There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify the username.
+<br/>
+`Default value: None`
+<br/>
+
+<b>DynamicEnergyThreshold <Boolean> - Optional</b><br/>
+    
+In voice recording, there is important to set up the optimal value, which will eliminate the unwanted noise or background voices. In "normal" conditions, I'm recommending to use this Dynamic Energy Threshold. More details you can see in documentation about the speechrecognition library itself.
 
 <br/>
-<b>Password <string> - Optional</b><br/>
+`Default value: True`
+<br/>
+
+<b>EnergyThresholdValue <Int32> - Optional</b><br/>
     
-The same as for usernam. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password. By default, it's `None`.
+In case, you don't want to use the dynamic threshold for recording your voice, you can specify this threshold. The recommended range is 400-3500. Lower value = lower threshold to start recording voice. In condition with a lot of noice, it's recommended to use higher value. Everything related to that [here](https://github.com/Uberi/speech_recognition/blob/master/reference/library-reference.rst).
 
 <br/>
-<b>Password <string> - Optional</b><br/>
-    
-The same as for username. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password. By default, it's `None`.
+`Default value: 300`
+<br/>
+
+<b>Engine <string> - Optional</b><br/>
+There are couple of available engines for speech recognition. For most cases, there is good enough to use default Google Engine. For this engine, you don't need any credentials or API keys. The disadvantage is, that it's maybe not compliant to your company policy, because Google will get all your data. All engines, you can see [here](https://realpython.com/python-speech-recognition/). As in our custom activity, this input is an string, below, you can see the list of available engines in python script.
+
+- Google (no authentication)
+- GoogleCloud (APIKey)
+- Bing (APIKey)
+- Houndify (APIKey)
+- IBM (APIKey)
+- Sphinx
+- Wit (Username, Password)
+
+<br/>
+`Default value: Google`
+<br/>
+
+<b>InputLanguage <string> - Optional</b><br/>
+
+Some of engines supports to specify the input language for better understanding. Below, I will describe especially Google. The default value is `en-US`, but there are many other languages. All supported languages are mentioned [here](https://cloud.google.com/speech-to-text/docs/languages).  
+
+- Google (no authentication)
+- GoogleCloud (APIKey)
+- Bing (APIKey)
+- Houndify (APIKey)
+- IBM (APIKey)
+- Sphinx
+- Wit (Username, Password)
+
+<br/>
+`Default value: en-US`
+<br/>
+
+<b>PauseThreshold <double> - Optional</b><br/>
+
+You can specify the delay in seconds, after thet the recording of voice will be stoped and recognized as finished. This limit is not for start of recording (it's the timeout value), but for delay between words.
+
+<br/>
+`Default value: 0.8`
+<br/>
+
+<b>PhraseTimeLimit <double> - Optional</b><br/>
+
+The phrase_time_limit parameter is the maximum number of seconds that this will allow a phrase to continue before stopping and returning the part of the phrase processed before the time limit was reached. The resulting audio will be the phrase cut off at the time limit. If phrase_timeout is None, there will be no phrase time limit.
+
+<br/>
+`Default value: None`
+<br/>
+
+<b>TimeoutSeconds <double> - Optional</b><br/>
+
+The timeout parameter is the maximum number of seconds that this will wait for a phrase to start before giving up and throwing an speech_recognition.WaitTimeoutError exception. If timeout is None, there will be no wait timeout.
+
+<br/>
+`Default value: None`
+<br/>
+
+<b>OutputParameters <IEnumerable><object> - Optional</b><br/>
+
+This parameter will store the object of all parameters, which were used for voice recognition customization. This OutputParameters object is then used as an input for python script.  
+
+<br/>
+`Default value: None`
+<br/>
 
 ---
 ## Demo
-fad
+To demonstrate, how this voice recognition works in UiPath, there are two demo scenarious, which were recorded. The first demo is using input file with a voice, which is recognized and converted to the string. The second demo then use the voice input from microphone and the speech is recognized and converted again to string.
 
 ### Python Activity Scope
 Now you have all prerequisities for using Python script in UiPath Studio. There needs to be just configured the Python Scope. In this Activity, just put the Path to the Python folder, i.e.: `C:\Python36-32`. The easiest way, how to get the Python location, is to run this command in Command Prompt:

@@ -118,7 +118,9 @@ print(sr.Microphone.list_microphone_names())
 ```
 
 <br/>
+
 `Default value: 0`
+
 <br/>
 <b>FilePath <string> - Optional</b><br/>
 For Speech recognition, where you want to convert already recorded sound to string, you need to specify the path to that file. You can use absolute and also relative path to that file. All supported input files are listed below:
@@ -129,26 +131,34 @@ For Speech recognition, where you want to convert already recorded sound to stri
 - FLAC: must be native FLAC format; OGG-FLAC is not supported
 
 <br/>
+
 `Default value: None`
+
 <br/>
 <b>APIKey <string> - Optional</b><br/>
 
 APIKey is the authentication for some engines, which you can use for speech recognition. All speech recognition engines are listed and described in section below - Engine. This argument is optional, because it is dependent on used engine.
 
 <br/>
+
 `Default value: None`
+
 <br/>
 <b>Password <string> - Optional</b><br/>
     
 The same as for username. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password.
+<br/>
 
 `Default value: None`
+
 <br/>
 <b>Username <string> - Optional</b><br/>
     
 There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify the username.
 <br/>
+
 `Default value: None`
+
 <br/>
 
 <b>DynamicEnergyThreshold <Boolean> - Optional</b><br/>
@@ -156,7 +166,9 @@ There are some engines, which are using basic authentication method - username a
 In voice recording, there is important to set up the optimal value, which will eliminate the unwanted noise or background voices. In "normal" conditions, I'm recommending to use this Dynamic Energy Threshold. More details you can see in documentation about the speechrecognition library itself.
 
 <br/>
+
 `Default value: True`
+
 <br/>
 
 <b>EnergyThresholdValue <Int32> - Optional</b><br/>
@@ -164,7 +176,9 @@ In voice recording, there is important to set up the optimal value, which will e
 In case, you don't want to use the dynamic threshold for recording your voice, you can specify this threshold. The recommended range is 400-3500. Lower value = lower threshold to start recording voice. In condition with a lot of noice, it's recommended to use higher value. Everything related to that [here](https://github.com/Uberi/speech_recognition/blob/master/reference/library-reference.rst).
 
 <br/>
+
 `Default value: 300`
+
 <br/>
 
 <b>Engine <string> - Optional</b><br/>
@@ -179,23 +193,19 @@ There are couple of available engines for speech recognition. For most cases, th
 - Wit (Username, Password)
 
 <br/>
+
 `Default value: Google`
+
 <br/>
 
 <b>InputLanguage <string> - Optional</b><br/>
 
 Some of engines supports to specify the input language for better understanding. Below, I will describe especially Google. The default value is `en-US`, but there are many other languages. All supported languages are mentioned [here](https://cloud.google.com/speech-to-text/docs/languages).  
 
-- Google (no authentication)
-- GoogleCloud (APIKey)
-- Bing (APIKey)
-- Houndify (APIKey)
-- IBM (APIKey)
-- Sphinx
-- Wit (Username, Password)
-
 <br/>
+
 `Default value: en-US`
+
 <br/>
 
 <b>PauseThreshold <double> - Optional</b><br/>
@@ -203,7 +213,9 @@ Some of engines supports to specify the input language for better understanding.
 You can specify the delay in seconds, after thet the recording of voice will be stoped and recognized as finished. This limit is not for start of recording (it's the timeout value), but for delay between words.
 
 <br/>
+
 `Default value: 0.8`
+
 <br/>
 
 <b>PhraseTimeLimit <double> - Optional</b><br/>
@@ -211,7 +223,9 @@ You can specify the delay in seconds, after thet the recording of voice will be 
 The phrase_time_limit parameter is the maximum number of seconds that this will allow a phrase to continue before stopping and returning the part of the phrase processed before the time limit was reached. The resulting audio will be the phrase cut off at the time limit. If phrase_timeout is None, there will be no phrase time limit.
 
 <br/>
+
 `Default value: None`
+
 <br/>
 
 <b>TimeoutSeconds <double> - Optional</b><br/>
@@ -219,7 +233,9 @@ The phrase_time_limit parameter is the maximum number of seconds that this will 
 The timeout parameter is the maximum number of seconds that this will wait for a phrase to start before giving up and throwing an speech_recognition.WaitTimeoutError exception. If timeout is None, there will be no wait timeout.
 
 <br/>
+
 `Default value: None`
+
 <br/>
 
 <b>OutputParameters <IEnumerable><object> - Optional</b><br/>
@@ -227,7 +243,9 @@ The timeout parameter is the maximum number of seconds that this will wait for a
 This parameter will store the object of all parameters, which were used for voice recognition customization. This OutputParameters object is then used as an input for python script.  
 
 <br/>
+
 `Default value: None`
+
 <br/>
 
 ---

@@ -1,0 +1,4 @@
+speechRecognition
+pyAudio
+google-api-python-client
+PocketSphinx

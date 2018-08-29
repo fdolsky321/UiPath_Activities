@@ -256,6 +256,22 @@ This parameter will store the object of all parameters, which were used for voic
 
 To demonstrate, how this voice recognition works in UiPath, there are two demo scenarious, which were recorded. The first demo is using input file with a voice, which is recognized and converted to the string. The second demo then use the voice input from microphone and the speech is recognized and converted again to string.
 
+### First Run initialization
+To run the demo, there is necessarily to set up couple of global variables and then setup the parameters for speech recognition. Please folow instructions below to get fully working solution.
+
+1. [Install and Configure Python 3](#install-and-configure-python-3)
+2. Install [SpeechRecognition Library](#install-speechRecognition-library) and [PyAudio Library](#install-pyAudio-library)
+3. [Import Custom Activity](#import-custom-activity)
+4. [Install Python Activities Pack](#install-python-activities-pack)
+5. Download [Python Script](https://github.com/fdolsky321/UiPath_Activities/tree/master/speech_recognition) to your local machine
+5. Save and Open [SpeechRecognition.xaml](https://github.com/fdolsky321/UiPath_Activities/tree/master/speech_recognition) file in UiPath
+6. In Python Setup sequence, assign the path to pythonEnvPath (i.e.: `C:\Python36-32`). To get this path, just run command `where python` in Command Prompt. Then just remove last part of the location, which is: `\python.exe`.
+7. In Python Setup sequence, assign the path to the Python script, which you have downloaded in step 5.
+8. a) In case of recording your voice in microphone, set the value of DeviceID, as it's described in [Setting Up arguments](#setting-up-arguments). <br/>
+   b) In case of recognition of Audio File, set the path to that file. Supported file formats are mentioned in [Setting Up arguments](#setting-up-arguments).
+9. Run the script
+
+
 ### Python Activity Scope
 Now you have all prerequisities for using Python script in UiPath Studio. There needs to be just configured the Python Scope. In this Activity, just put the Path to the Python folder, i.e.: `C:\Python36-32`. The easiest way, how to get the Python location, is to run this command in Command Prompt:
 `where python`. Then just remove the last part of the location, which is: `\python.exe`. Now you are able to run the python script in UiPath Studio

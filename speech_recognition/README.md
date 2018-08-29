@@ -238,7 +238,7 @@ The timeout parameter is the maximum number of seconds that this will wait for a
 
 <br/>
 
-
+<b>OutputParameters <IEnumerable> - Optional</b>
 
 <br/>
 

@@ -238,15 +238,22 @@ The timeout parameter is the maximum number of seconds that this will wait for a
 
 <br/>
 
-<b>OutputParameters <IEnumerable><object> - Optional</b>
+
 
 <br/>
 
+This parameter will store the object of all parameters, which were used for voice recognition customization. This OutputParameters object is then used as an input for python script.  
 
+<br/>
+
+`Default value: None`
+
+<br/>
 
 ---
 
 ## Demo
+
 To demonstrate, how this voice recognition works in UiPath, there are two demo scenarious, which were recorded. The first demo is using input file with a voice, which is recognized and converted to the string. The second demo then use the voice input from microphone and the speech is recognized and converted again to string.
 
 ### Python Activity Scope

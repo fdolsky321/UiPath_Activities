@@ -6,5 +6,5 @@ This repository was created to manage custom activities prepared for UiPath. Eac
 - How to create C# custom activity
 - How to create Python activity
 
-## List of Custom Activities
+## List of custom activities
 - Speech recognition

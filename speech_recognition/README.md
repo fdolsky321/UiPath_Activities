@@ -242,13 +242,7 @@ The timeout parameter is the maximum number of seconds that this will wait for a
 
 <br/>
 
-This parameter will store the object of all parameters, which were used for voice recognition customization. This OutputParameters object is then used as an input for python script.  
 
-<br/>
-
-`Default value: None`
-
-<br/>
 
 ---
 

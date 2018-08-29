@@ -109,7 +109,7 @@ For setting up all necessarrily arguments, there is a custom activity provided i
     </li>
 </ul>
 <br/>
-<b>DeviceID <Int32> - Optional</b><br/>
+<b>DeviceID (Int32) - Optional</b><br/>
 For Speech recognition, where you want to record the voice, you have to specify the ID of input device (microphone). This argument is optional, by default it's 0. Mostly it's good enough to use the default one with index 0. During debugging, you can get the index of all your input devices pretty easily by following python script (for python3):
 
 ```python
@@ -122,7 +122,7 @@ print(sr.Microphone.list_microphone_names())
 `Default value: 0`
 
 <br/>
-<b>FilePath <string> - Optional</b><br/>
+<b>FilePath (string) - Optional</b><br/>
 For Speech recognition, where you want to convert already recorded sound to string, you need to specify the path to that file. You can use absolute and also relative path to that file. All supported input files are listed below:
     
 - WAV: must be in PCM/LPCM format
@@ -135,7 +135,7 @@ For Speech recognition, where you want to convert already recorded sound to stri
 `Default value: None`
 
 <br/>
-<b>APIKey <string> - Optional</b><br/>
+<b>APIKey (string) - Optional</b><br/>
 
 APIKey is the authentication for some engines, which you can use for speech recognition. All speech recognition engines are listed and described in section below - Engine. This argument is optional, because it is dependent on used engine.
 
@@ -144,7 +144,7 @@ APIKey is the authentication for some engines, which you can use for speech reco
 `Default value: None`
 
 <br/>
-<b>Password <string> - Optional</b><br/>
+<b>Password (string) - Optional</b><br/>
     
 The same as for username. There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify also the password.
 <br/>
@@ -152,7 +152,7 @@ The same as for username. There are some engines, which are using basic authenti
 `Default value: None`
 
 <br/>
-<b>Username <string> - Optional</b><br/>
+<b>Username (string) - Optional</b><br/>
     
 There are some engines, which are using basic authentication method - username and password instead of API key. For them, you have to specify the username.
 <br/>
@@ -161,7 +161,7 @@ There are some engines, which are using basic authentication method - username a
 
 <br/>
 
-<b>DynamicEnergyThreshold <Boolean> - Optional</b><br/>
+<b>DynamicEnergyThreshold (Boolean) - Optional</b><br/>
     
 In voice recording, there is important to set up the optimal value, which will eliminate the unwanted noise or background voices. In "normal" conditions, I'm recommending to use this Dynamic Energy Threshold. More details you can see in documentation about the speechrecognition library itself.
 
@@ -171,7 +171,7 @@ In voice recording, there is important to set up the optimal value, which will e
 
 <br/>
 
-<b>EnergyThresholdValue <Int32> - Optional</b><br/>
+<b>EnergyThresholdValue (Int32) - Optional</b><br/>
     
 In case, you don't want to use the dynamic threshold for recording your voice, you can specify this threshold. The recommended range is 400-3500. Lower value = lower threshold to start recording voice. In condition with a lot of noice, it's recommended to use higher value. Everything related to that [here](https://github.com/Uberi/speech_recognition/blob/master/reference/library-reference.rst).
 
@@ -181,7 +181,7 @@ In case, you don't want to use the dynamic threshold for recording your voice, y
 
 <br/>
 
-<b>Engine <string> - Optional</b><br/>
+<b>Engine (string) - Optional</b><br/>
 There are couple of available engines for speech recognition. For most cases, there is good enough to use default Google Engine. For this engine, you don't need any credentials or API keys. The disadvantage is, that it's maybe not compliant to your company policy, because Google will get all your data. All engines, you can see [here](https://realpython.com/python-speech-recognition/). As in our custom activity, this input is an string, below, you can see the list of available engines in python script.
 
 - Google (no authentication)
@@ -198,7 +198,7 @@ There are couple of available engines for speech recognition. For most cases, th
 
 <br/>
 
-<b>InputLanguage <string> - Optional</b><br/>
+<b>InputLanguage (string) - Optional</b><br/>
 
 Some of engines supports to specify the input language for better understanding. Below, I will describe especially Google. The default value is `en-US`, but there are many other languages. All supported languages are mentioned [here](https://cloud.google.com/speech-to-text/docs/languages).  
 
@@ -208,7 +208,7 @@ Some of engines supports to specify the input language for better understanding.
 
 <br/>
 
-<b>PauseThreshold <double> - Optional</b><br/>
+<b>PauseThreshold (double) - Optional</b><br/>
 
 You can specify the delay in seconds, after thet the recording of voice will be stoped and recognized as finished. This limit is not for start of recording (it's the timeout value), but for delay between words.
 
@@ -218,7 +218,7 @@ You can specify the delay in seconds, after thet the recording of voice will be 
 
 <br/>
 
-<b>PhraseTimeLimit <double> - Optional</b><br/>
+<b>PhraseTimeLimit (double) - Optional</b><br/>
 
 The phrase_time_limit parameter is the maximum number of seconds that this will allow a phrase to continue before stopping and returning the part of the phrase processed before the time limit was reached. The resulting audio will be the phrase cut off at the time limit. If phrase_timeout is None, there will be no phrase time limit.
 
@@ -228,7 +228,7 @@ The phrase_time_limit parameter is the maximum number of seconds that this will 
 
 <br/>
 
-<b>TimeoutSeconds <double> - Optional</b><br/>
+<b>TimeoutSeconds (double) - Optional</b><br/>
 
 The timeout parameter is the maximum number of seconds that this will wait for a phrase to start before giving up and throwing an speech_recognition.WaitTimeoutError exception. If timeout is None, there will be no wait timeout.
 
@@ -238,7 +238,7 @@ The timeout parameter is the maximum number of seconds that this will wait for a
 
 <br/>
 
-<b>OutputParameters <IEnumerable> - Optional</b>
+<b>OutputParameters (IEnumerable)(Object) - Optional</b>
 
 <br/>
 
